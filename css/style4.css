@@ -1,0 +1,230 @@
+
+/*==================================*/
+body {
+    background: var(--gray);
+}
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.page__container {
+    display: flex;
+    height: 100%;
+}
+
+.page__aside {
+    flex: 0 1 30%;
+    border-right: 1px solid var(--black);
+}
+
+.aside {
+}
+
+.aside__wrapper {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.aside__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.aside__item {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+    transition: all 0.3s ease-in-out;
+}
+
+.aside__item:hover {
+    border: 1px solid var(--black);
+    box-shadow: 1px 1px 5px 0px var(--black)
+}
+
+.aside__title {
+
+}
+
+.aside__list {
+}
+
+.page__body {
+    flex: 1 1 auto;
+    border-right: 1px solid var(--black);
+}
+
+.body {
+}
+
+.body__wrapper {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.body__title {
+}
+
+.body__list {
+    width: 100%;
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.body__item {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+    max-width: 300px;
+}
+
+.body__item:hover {
+    border: 1px solid var(--black);
+    box-shadow: 1px 1px 5px 0px var(--black);
+}
+
+.body__name {
+    text-align: center;
+    font-size: 24px;
+}
+
+.body__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.page__info {
+    flex: 0 1 30%;
+}
+
+.info {
+}
+
+.info__wrapper {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.info__title {
+}
+
+.info__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info__buy {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+    max-width: 300px;
+}
+.info__buy-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info__form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.info__form-input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+}
+.info__form-submit {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+    transition: all 0.3s ease-in-out;
+    background: var(--green);
+}
+.aside__button {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+    max-width: 300px;
+    margin-top: 20px;
+}
+.aside__orders {
+    padding: 5px;
+    border-radius: 4px;
+    /*border: 1px solid var(--darkGray);*/
+    transition: all 0.3s ease-in-out;
+    /*background: var(--white);*/
+    width: 100%;
+    margin-top: 20px;
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.aside__orders--active {
+    /*border: 1px solid var(--black);*/
+    /*box-shadow: 1px 1px 5px 0px var(--black);*/
+    display: grid;
+}
+
+.aside__item {
+
+}
+
+.aside__delete {
+    padding: 3px 5px;
+    border-radius: 4px;
+    border: 1px solid var(--darkGray);
+    background: var(--red);
+    margin-top: 10px;
+    color: var(--white)
+}
+@media (max-width: 767.98px) {
+    .page__container {
+        flex-direction: column;
+    }
+
+    .page__aside {
+        flex: 0 1 auto;
+        border-right: none;
+        border-bottom: 1px solid var(--white);
+    }
+
+    .page__body {
+        flex: 0 1 auto;
+        border-right: none;
+        border-bottom: 1px solid var(--white);
+    }
+
+    .page__info {
+        flex: 0 1 auto;
+    }
+}
